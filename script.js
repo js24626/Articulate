@@ -57,28 +57,23 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
 const menu = document.getElementById('mobile-menu');
-const openMenuBtn = document.getElementById('menu-btn'); 
+const openMenuBtn = document.getElementById('menu-btn');
 const closeMenuBtn = document.getElementById('close-menu');
 
 // Open Sidebar
 openMenuBtn.addEventListener('click', () => {
-    menu.style.right = "0"; // Moves into view
+    menu.classList.add('active');
 });
 
 // Close Sidebar
 closeMenuBtn.addEventListener('click', () => {
-    menu.style.right = "-100%"; // Moves out of view
+    menu.classList.remove('active');
 });
 
 // Close on Click Outside
 document.addEventListener('click', (event) => {
     if (!menu.contains(event.target) && !openMenuBtn.contains(event.target)) {
-        menu.style.right = "-100%"; // Moves out of view
+        menu.classList.remove('active');
     }
 });
-
-
-
-
