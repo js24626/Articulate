@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Website</title>
+    <link href="styles.css" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+
+</head>
+<body class="bg-[#eaf6ff] overflow-x-hidden ">  <!-- Set the default background for the entire page -->
+    
+    <div class="bg-cover bg-center min-h-screen relative" style="background-image: url('/images/hero.jpg');">
+        
+        <!-- Navbar -->
+        <nav id="navbar" class="fixed top-0 left-0 w-full z-50  ">
+            <div class="container mx-auto flex justify-between items-center p-4">
+                <!-- Logo -->
+                <div class="animate-fade-left">
+                    <img src="/images/logo.png" alt="Company Logo" class="h-14 w-auto">
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden text-lg google-sans font-semibold md:flex animate-fade-right space-x-6 text-black">
+                    <a href="#" class="hover:text-blue-800 transition">Home</a>
+                    <a href="#" class="hover:text-blue-800 transition">About</a>
+                    <a href="#" class="hover:text-blue-800 transition">Services</a>
+                    <a href="#" class="hover:text-blue-800 transition">Plan</a>
+                    <a href="#" class="hover:text-blue-800 transition">Contact</a>
+                </div>
+              
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-black text-3xl focus:outline-none" id="menu-btn">☰</button>
+            </div>
+        </nav>
+
+        <!-- Mobile Sidebar Menu -->
+        <div id="mobile-menu" class="fixed top-0 right-[-100%] h-full w-64 bg-white shadow-lg p-6 z-50 md:hidden transition-all duration-300 ease-in-out">
+            <button class="text-gray-700 text-2xl absolute top-4 right-6" id="close-menu">✖</button>
+            <div class="flex flex-col mt-12 space-y-6 text-xl font-semibold text-[#7c3aed]">
+                <a href="#" class="hover:text-blue-800 transition">Home</a>
+                <a href="#" class="hover:text-blue-800 transition">About</a>
+                <a href="#" class="hover:text-blue-800 transition">Services</a>
+                <a href="#" class="hover:text-blue-800 transition">Plan</a>
+                <a href="#" class="hover:text-blue-800 transition">Contact</a>
+            </div>
+        </div>
+
+
+        
+        <!-- Hero Section -->
+        <section class="hero min-h-screen flex flex-col items-center justify-center text-center relative px-6">
+            <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+
+            <h1 class="text-4xl md:text-6xl font-bold text-white relative z-10">
+                Try <span class="text-purple-600 inline-flex items-center space-x-2">
+                    <img src="/images/rada-.png" alt="Icon" class="h-12 md:h-14 w-12 md:w-14">
+                    <span>Sales Radar</span>
+                </span>
+            </h1>
+            <h2 class="text-3xl md:text-6xl font-bold text-white relative z-10">for your business</h2>
+    
+            <p class="text-lg md:text-xl text-gray-700 leading-relaxed mt-4 relative z-10">
+                A sales service suitable for any e-commerce business
+            </p>
+            <div class="mt-8 space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row items-center justify-center relative z-10">
+                <button class="px-8 py-3 bg-blue-500 animate-fade-up hover:bg-blue-600 text-white rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+                    Get Started
+                </button>
+                <button class="px-8 py-3 animate-fade-down border border-gray-300 text-black rounded-full bg-white/10 backdrop-blur-lg hover:bg-white hover:text-gray-900 shadow-lg transition-all duration-300 transform hover:scale-105">
+                    Learn More
+                </button>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- Why Choose Section -->
+    <section class="bg-gray-200 py-28">
+        <div class="container max-w-7xl mx-auto flex flex-col md:flex-row items-center px-6 md:px-12 lg:px-20 space-y-12 md:space-y-0">
+            <!-- Left: Image -->
+            <div class="md:w-1/2 flex justify-center md:justify-start">
+                <img src="/images/illu-.png" alt="Handshake Illustration" class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+            </div>
+    
+            <!-- Right: Content -->
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                    Why choose us?
+                </h2>
+                <p class="text-gray-700 leading-relaxed text-lg">
+                    With our app, sourcing and delivering professional services has never been easier. Discover a seamless, 
+                    transparent, and user-friendly marketplace where skilled professionals showcase their expertise, and 
+                    clients find and book the services.
+                </p>
+                <button class="mt-6 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold px-6 py-3 rounded-lg transition duration-300">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </section>
+    
+          <!-- Choose a plan -->
+    <section class="w-full google-sans py-28 bg-[#eaf6ff]">
+        <!-- Top Section -->
+        <div class="relative text-center px-4">
+            <button class="absolute top-0 ml-72 left-1/2 transform -translate-x-1/2 px-5 py-2 border border-gray-400 rounded-full text-sm font-semibold text-gray-600">
+                OUR PRICES
+            </button>
+            <h2 class="text-purple-600 text-3xl md:text-4xl mt-12">
+                <span class="text-black">Choose a </span><span id="text"></span><span class="cursor"></span>
+            </h2>
+            <p class="text-gray-600 mt-6 max-w-xl mx-auto">
+                We offer favorable conditions for any budget. You may cancel anytime through your account settings.
+                Charges are non-refundable for the current billing cycle.
+            </p>
+        </div>
+    
+        <!-- Pricing Cards -->
+        <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-6">
+            <!-- Basic Plan -->
+            <div class="bg-white rounded-3xl shadow-xl p-10 hover:scale-105 transition duration-300">
+                <h3 class="text-2xl font-semibold">Basic</h3>
+                <hr class="my-5 border-gray-300">
+                <ul class="text-gray-600 mt-6 space-y-4">
+                    <li class="flex items-center gap-2">
+                        <span class="text-blue-600">✔</span> Access to standard features
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-blue-600">✔</span> Ad-free experience
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-blue-600">✔</span> Customer support
+                    </li>
+                </ul>
+                <p class="text-4xl font-bold mt-8">$29.99 <span class="text-lg text-gray-500">/ month</span></p>
+                <button class="mt-8 w-full py-4 bg-indigo-600 text-white rounded-full hover:bg-indigo-700">
+                    Buy Now
+                </button>
+            </div>
+    
+            <!-- Premium Plan -->
+            <div class="bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-3xl shadow-xl p-10 hover:scale-110 transition duration-300">
+                <h3 class="text-2xl font-semibold">Premium</h3>
+                <hr class="my-5 border-gray-200 opacity-50">
+                <ul class="space-y-4 mt-6">
+                    <li class="flex items-center gap-2">
+                        <span class="text-white">✔</span> Access to standard features
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-white">✔</span> Ad-free experience
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-white">✔</span> Customer support
+                    </li>
+                </ul>
+                <p class="text-4xl font-bold mt-8">$69.99 <span class="text-lg opacity-90">/ month</span></p>
+                <button class="mt-8 w-full py-4 bg-white text-blue-600 font-semibold rounded-full hover:bg-gray-200">
+                    Buy Now
+                </button>
+            </div>
+    
+            <!-- Premium Plus Plan -->
+            <div class="bg-white rounded-3xl shadow-xl p-10 hover:scale-105 transition duration-300">
+                <h3 class="text-2xl font-semibold">Premium Plus</h3>
+                <hr class="my-5 border-gray-300">
+                <ul class="text-gray-600 mt-6 space-y-4">
+                    <li class="flex items-center gap-2">
+                        <span class="text-blue-600">✔</span> Access to standard features
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-blue-600">✔</span> Ad-free experience
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-blue-600">✔</span> Customer support
+                    </li>
+                </ul>
+                <p class="text-4xl font-bold mt-8">$199.99 <span class="text-lg text-gray-500">/ month</span></p>
+                <button class="mt-8 w-full py-4 bg-indigo-600 text-white rounded-full hover:bg-indigo-700">
+                    Buy Now
+                </button>
+            </div>
+        </div>
+    </section>
+         
+    <section class="w-full h-screen  flex justify-center items-center">
+        <div class="">
+            <img src="/images/payment.JPG" alt="Top Rated Site Builder" class="w-full h-full object-cover">
+        </div>
+    </section>
+    
+    <!-- How it Works -->
+    <section class=" google-sans py-12 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl font-bold text-gray-900">How it Works</h2>
+          <p class="text-gray-600 text-lg mt-2">Step-by-step Guide</p>
+        </div>
+        
+        <div class="max-w-5xl mx-auto mt-8 flex flex-col md:flex-row items-center justify-between relative">
+          <div class="absolute top-5 left-1/2 transform -translate-x-1/2 w-full max-w-md md:max-w-lg lg:max-w-xl h-0.5 bg-yellow-500 dotted-line"></div>
+          
+          <div class="text-center max-w-xs relative z-10">
+            <div class="flex items-center justify-center w-10 h-10 bg-yellow-500 text-white font-bold rounded-full mx-auto">1</div>
+            <h3 class="font-semibold text-gray-900 mt-4">Install the app</h3>
+            <p class="text-gray-600 text-sm mt-2">Enter your information and ensure your details are safe and more secure</p>
+          </div>
+          
+          <div class="text-center max-w-xs relative z-10">
+            <div class="flex items-center justify-center w-10 h-10 bg-yellow-500 text-white font-bold rounded-full mx-auto">2</div>
+            <h3 class="font-semibold text-gray-900 mt-4">Browse services</h3>
+            <p class="text-gray-600 text-sm mt-2">Explore a diverse range of professional services.</p>
+          </div>
+          
+          <div class="text-center max-w-xs relative z-10">
+            <div class="flex items-center justify-center w-10 h-10 bg-yellow-500 text-white font-bold rounded-full mx-auto">3</div>
+            <h3 class="font-semibold text-gray-900 mt-4">Book and pay</h3>
+            <p class="text-gray-600 text-sm mt-2">Schedule and pay for services securely within the app</p>
+          </div>
+        </div>
+      </section>
+      <footer class="py-6 bg-gray-900 text-gray-300">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <!-- Logo and Branding -->
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <img src="/images/logo.png" alt="Company Logo" class="h-14 w-auto">
+                    <h5 class="text-lg font-bold text-white">Articulate</h5>
+                    <p class="text-gray-400 text-sm">Innovating the Future</p>
+                </div>
+                
+                <!-- Social Media Links -->
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-white text-xl"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.988h-2.54v-2.89h2.54v-2.197c0-2.507 1.493-3.89 3.777-3.89 1.097 0 2.24.195 2.24.195v2.457h-1.264c-1.247 0-1.63.775-1.63 1.568v1.867h2.773l-.443 2.89h-2.33V21.88C18.343 21.128 22 16.991 22 12z"/></svg></a>
+                    <a href="#" class="text-gray-300 hover:text-white text-xl"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></a>
+                    <a href="#" class="text-gray-300 hover:text-white text-xl"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8 3a5 5 0 00-5 5v8a5 5 0 005 5h8a5 5 0 005-5V8a5 5 0 00-5-5H8zm9 14a4 4 0 11-8 0 4 4 0 018 0zm2-10a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg></a>
+                    <a href="#" class="text-gray-300 hover:text-white text-xl"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-10 20h-3v-10h3v10zm-1.5-11.25c-.97 0-1.75-.79-1.75-1.75s.79-1.75 1.75-1.75c.97 0 1.75.79 1.75 1.75s-.79 1.75-1.75 1.75zm13.5 11.25h-3v-5.5c0-1.38-1.12-2.5-2.5-2.5s-2.5 1.12-2.5 2.5v5.5h-3v-10h3v1.5c.87-1.12 2.24-1.5 3.5-1.5 2.49 0 4.5 2.01 4.5 4.5v5.5z"/></svg></a>
+                </div>
+            </div>
+            
+            <!-- Copyright Text -->
+            <div class="text-center text-gray-400 text-sm mt-4">
+                &copy; 2025 Articulate. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
