@@ -1,80 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Website</title>
-    <link href="styles.css" rel="stylesheet">
-    <!-- Tailwind CSS CDN -->
-<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Articulate</title>
+        <link href="styles.css" rel="stylesheet">
+        <!-- Tailwind CSS CDN -->
+            <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+            <link rel="icon" type="image/png" sizes="3x3" href="/images/logo1.png">
+
 
 
 </head>
-<body class="bg-[#eaf6ff] overflow-x-hidden ">  <!-- Set the default background for the entire page -->
-    
-    <div class="bg-cover bg-center min-h-screen relative" style="background-image: url('/images/hero.jpg');">
-        
-        <!-- Navbar -->
-        <nav id="navbar" class="fixed top-0 left-0 w-full z-50  ">
-            <div class="container mx-auto flex justify-between items-center p-4">
-                <!-- Logo -->
-                <div class="animate-fade-left">
-                    <img src="/images/logo.png" alt="Company Logo" class="h-14 w-auto">
-                </div>
+    <body class="bg-[#eaf6ff] overflow-x-hidden ">  <!-- Set the default background for the entire page -->
+            
+            <div class="bg-cover bg-center min-h-screen relative" style="background-image: url('/images/hero.jpg');">
                 
-                <!-- Desktop Menu -->
-                <div class="hidden text-lg google-sans  md:flex animate-fade-right space-x-6 text-black">
-                    <a href="#" class="hover:text-blue-800 transition">Home</a>
-                    <a href="#" class="hover:text-blue-800 transition">About</a>
-                    <a href="#" class="hover:text-blue-800 transition">Services</a>
-                    <a href="#" class="hover:text-blue-800 transition">Plan</a>
-                    <a href="#" class="hover:text-blue-800 transition">Contact</a>
+                <!-- Navbar -->
+                <nav id="navbar" class="fixed top-0 left-0 w-full z-50  ">
+                    <div class="container mx-auto flex justify-between items-center p-4">
+                        <!-- Logo -->
+                        <div class="animate-fade-left">
+                            <img src="/images/logo.png" alt="Company Logo" class="h-14 w-auto">
+                        </div>
+                        
+                        <!-- Desktop Menu -->
+                        <div class="hidden text-lg google-sans  md:flex animate-fade-right space-x-6 text-black">
+                            <a href="#" class="hover:text-blue-800 transition">Home</a>
+                            <a href="#" class="hover:text-blue-800 transition">About</a>
+                            <a href="#" class="hover:text-blue-800 transition">Services</a>
+                            <a href="#" class="hover:text-blue-800 transition">Plan</a>
+                            <a href="#" class="hover:text-blue-800 transition">Contact</a>
+                        </div>
+                    
+                        <!-- Mobile Menu Button -->
+                        <button class="md:hidden text-black text-3xl focus:outline-none" id="menu-btn">☰</button>
+                    </div>
+                </nav>
+
+                <!-- Mobile Sidebar Menu -->
+                <div id="mobile-menu" class="fixed top-0 right-[-100%] h-full w-64 bg-white shadow-lg p-6 z-50 md:hidden transition-all duration-300 ease-in-out">
+                    <button class="text-gray-700 text-2xl absolute top-4 right-6" id="close-menu">✖</button>
+                    <div class="flex flex-col mt-12 space-y-6 text-xl font-semibold text-[#7c3aed]">
+                        <a href="#" class="hover:text-blue-800 transition">Home</a>
+                        <a href="#" class="hover:text-blue-800 transition">About</a>
+                        <a href="#" class="hover:text-blue-800 transition">Services</a>
+                        <a href="#" class="hover:text-blue-800 transition">Plan</a>
+                        <a href="#" class="hover:text-blue-800 transition">Contact</a>
+                    </div>
                 </div>
-              
-                <!-- Mobile Menu Button -->
-                <button class="md:hidden text-black text-3xl focus:outline-none" id="menu-btn">☰</button>
+
+
+                
+                <!-- Hero Section -->
+                <section class="hero min-h-screen flex flex-col items-center justify-center text-center relative px-6">
+                    <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+
+                    <h1 class="text-4xl md:text-6xl font-bold text-white relative z-10">
+                        Try <span class="text-purple-600 inline-flex items-center space-x-2">
+                            <img src="/images/rada-.png" alt="Icon" class="h-12 md:h-14 w-12 md:w-14">
+                            <span>Sales Radar</span>
+                        </span>
+                    </h1>
+                    <h2 class="text-3xl md:text-6xl font-bold text-white relative z-10">for your business</h2>
+            
+                    <p class="text-lg md:text-xl text-gray-700 leading-relaxed mt-4 relative z-10">
+                        A sales service suitable for any e-commerce business
+                    </p>
+                    <div class="mt-8 space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row items-center justify-center relative z-10">
+                        <button class="px-8 py-3 bg-blue-500 animate-fade-up hover:bg-blue-600 text-white rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
+                            Get Started
+                        </button>
+                        <button class="px-8 py-3 animate-fade-down border border-gray-300 text-black rounded-full bg-white/10 backdrop-blur-lg hover:bg-white hover:text-gray-900 shadow-lg transition-all duration-300 transform hover:scale-105">
+                            Learn More
+                        </button>
+                    </div>
+                </section>
             </div>
-        </nav>
-
-        <!-- Mobile Sidebar Menu -->
-        <div id="mobile-menu" class="fixed top-0 right-[-100%] h-full w-64 bg-white shadow-lg p-6 z-50 md:hidden transition-all duration-300 ease-in-out">
-            <button class="text-gray-700 text-2xl absolute top-4 right-6" id="close-menu">✖</button>
-            <div class="flex flex-col mt-12 space-y-6 text-xl font-semibold text-[#7c3aed]">
-                <a href="#" class="hover:text-blue-800 transition">Home</a>
-                <a href="#" class="hover:text-blue-800 transition">About</a>
-                <a href="#" class="hover:text-blue-800 transition">Services</a>
-                <a href="#" class="hover:text-blue-800 transition">Plan</a>
-                <a href="#" class="hover:text-blue-800 transition">Contact</a>
-            </div>
-        </div>
-
-
-        
-        <!-- Hero Section -->
-        <section class="hero min-h-screen flex flex-col items-center justify-center text-center relative px-6">
-            <div class="absolute inset-0 bg-black bg-opacity-20"></div>
-
-            <h1 class="text-4xl md:text-6xl font-bold text-white relative z-10">
-                Try <span class="text-purple-600 inline-flex items-center space-x-2">
-                    <img src="/images/rada-.png" alt="Icon" class="h-12 md:h-14 w-12 md:w-14">
-                    <span>Sales Radar</span>
-                </span>
-            </h1>
-            <h2 class="text-3xl md:text-6xl font-bold text-white relative z-10">for your business</h2>
-    
-            <p class="text-lg md:text-xl text-gray-700 leading-relaxed mt-4 relative z-10">
-                A sales service suitable for any e-commerce business
-            </p>
-            <div class="mt-8 space-y-4 sm:space-y-0 sm:space-x-4 flex flex-col sm:flex-row items-center justify-center relative z-10">
-                <button class="px-8 py-3 bg-blue-500 animate-fade-up hover:bg-blue-600 text-white rounded-full shadow-lg transition-all duration-300 transform hover:scale-105">
-                    Get Started
-                </button>
-                <button class="px-8 py-3 animate-fade-down border border-gray-300 text-black rounded-full bg-white/10 backdrop-blur-lg hover:bg-white hover:text-gray-900 shadow-lg transition-all duration-300 transform hover:scale-105">
-                    Learn More
-                </button>
-            </div>
-        </section>
-    </div>
 
 
     <!-- Why Choose Section -->
